@@ -15,7 +15,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
 const mongoose = require('mongoose')
-const uri = "mongodb+srv://Asisten:radartelmat123@pttcluster.8hu0g.mongodb.net/pttdatabase?retryWrites=true&w=majority"
+const uri = process.env.MONGODB_URI
 mongoose.connect(uri, {
   useNewUrlParser:true})
 const db = mongoose.connection
@@ -25,6 +25,7 @@ db.once('open', () => console.log('Connected to Mongoose'))
 app.use('/', serverRouter)
 app.use('/ptts', pttRouter)
 
-app.listen(8080, () => {
-    console.log(`Server is running on port ${8080}`)
+const PORT  = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`)
 })
