@@ -1,0 +1,82 @@
+<b>Jadwal Praktikum Semester Ganjil 2021/2022</b>
+<p>by Butsainah Fadhilah & Debi Amalia</p>
+<form action="/ptts" method="GET">
+  <div>
+    <input type="text" name="nama" placeholder="Ketikkan Nama" value="<%= searchOptions.nama %>">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<div class="container">
+  <div class="row">
+   <table class="table table-striped table-primary">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Praktikum</th>
+        <th>Mata Kuliah Praktikum</th>
+        <th>Modul</th>
+        <th>Hari/ Tanggal Praktikum</th>
+        <th>Jam Praktikum</th>
+        <th>Nama Asisten</th>
+        <th>NIM Asisten</th>
+        <th>Kelompok</th>
+        <th>Online / Offline</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% ptts.forEach(ptt => { %>
+      <tr>
+        <td><%= ptt.nama %></td>
+        <td><%= ptt.nim %></td>
+        <td><%= ptt.praktikum %></td>  
+        <td><%= ptt.nama_mata_kuliah_praktikum %></td>
+        <td><%= ptt.modul %></td>
+        <td><%= ptt.hari_tanggal_praktikum %></td>
+        <td><%= ptt.jam_praktikum %></td>
+        <td><%= ptt.nama_asisten %></td>
+        <td><%= ptt.nim_asisten %></td>
+        <td><%= ptt.kelompok %></td>
+        <td><%= ptt.online_offline %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<style>
+  .table {
+  overflow: hidden;
+  background-color: #d9dbe6;
+  width: max-content;
+  }
+
+  .table th{
+    font-size: 17px;
+  }
+  .table td {
+    font-size: 15px;
+  }
+
+  b{
+    margin-left: 200px;
+    font-size: 30px;
+  }
+
+  p{
+    margin-left: 200px;
+  }
+  
+  input{
+    width: calc(50% - 250px);
+    padding: 10px 13px;
+    margin-right: 13px;
+    margin-left: 450px;
+    margin-bottom: 25px;
+    font-size: 1 rem;
+    background-color: transparent;
+    outline: none;
+  }
+
+</style>

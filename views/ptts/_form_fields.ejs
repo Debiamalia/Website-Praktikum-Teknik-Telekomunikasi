@@ -1,0 +1,61 @@
+<div class="card mt-3">
+    <div class="card-header bg-primary text-white ">
+      Tambahkan Data
+    </div>
+    <div class="card-body">
+      <form method = "post" action="">
+	  		<div class="form-group">
+                <label>Nama</label>
+                <input type="text" class="form-control" name="nama" value="<%= ptt.nama %>">
+            </div>
+            <div class="form-group">
+                <label>NIM</label>
+                <input type="number" class="form-control" name="nim" value="<%= ptt.nim %>">
+            </div>
+            <div class="form-group">
+                <label>Praktikum</label>
+                <input type="text" class="form-control" name="praktikum" value="<%= ptt.praktikum %>">
+            </div>
+            <div class="form-group">
+                <label>Nama Mata Kuliah Praktikum</label>
+                <input type="text" class="form-control" name="nama_mata_kuliah_praktikum" value="<%= ptt.nama_mata_kuliah_praktikum %>">
+            </div>
+            <div class="form-group">
+                <label>Modul</label>
+                <input type="number" class="form-control" name="modul" value="<%= ptt.modul %>">
+            </div>
+            <div class="form-group">
+                <label>Hari/Tanggal Praktikum</label>
+                <input type="text" class="form-control" name="hari_tanggal_praktikum" value="<%= ptt.hari_tanggal_praktikum %>">
+            </div>
+            <div class="form-group">
+                <label>Jam Praktikum</label>
+                <input type="text" class="form-control" name="jam_praktikum" value="<%= ptt.jam_praktikum %>">
+            </div>
+            <div class="form-group">
+                <label>Nama Asisten</label>
+                <input type="text" class="form-control" name="nama_asisten" value="<%= ptt.nama_asisten %>">
+            </div>
+            <div class="form-group">
+                <label>NIM Asisten</label>
+                <input type="number" class="form-control" name="nim_asisten" value="<%= ptt.nim_asisten %>">
+            </div>
+            <div class="form-group">
+                <label>Kelompok</label>
+                <input type="number" class="form-control" name="kelompok" value="<%= ptt.kelompok %>">
+            </div>
+            <div class="form-group">
+                <label>Online/Offline</label>
+                <input type="text" class="form-control" name="online_offline" value="<%= ptt.online_offline %>">
+            </div>
+        <button type="submit" class="btn btn-success" name="bcreate">Simpan</button>
+        <button a href="/ptts" class="btn btn-danger">Cancel</button>
+      </form>
+    </div>
+</div>
+
+
+
+ 
+
+
